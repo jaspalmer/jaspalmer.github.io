@@ -1,33 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jas Palmer</title>
-  <style>
-    body {
-      background: #faf8f4;
-      color: #1a1a1a;
-      font-family: Georgia, serif;
-      line-height: 1.6;
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 4rem 1.5rem;
-    }
-    .center { text-align: center; }
-    .spacer { height: 6rem; }
-    a { color: #1a1a1a; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monk's Path — Jas Palmer</title>
+<meta name="description" content="Epiphany engines. Film, sound, prose.">
+
+<!-- ══ FONTS ══ one request. EB Garamond: the commonplace-book face. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════════════════════════════
+   EDIT EVERYTHING HERE. These are the only colors used.
+   ═══════════════════════════════════════════════════════ */
+:root{
+  --paper:  #eae7de;   /* library card stock — cool, grey-warm */
+  --ink:    #191713;   /* iron gall */
+  --rubric: #8b2f24;   /* manuscript red. the heading color. */
+  --panel:  #16150f;   /* Warburg's black cloth */
+  --bone:   #ddd8ca;   /* text on the panel */
+  --faded:  #7d7768;   /* captions, dates, absences */
+  --rule:   #c9c4b6;   /* hairlines */
+
+  --serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  --sans: ui-sans-serif, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper); color:var(--ink);
+  font-family:var(--serif); font-size:19px; line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  padding:0 24px;
+}
+.wrap{max-width:660px;margin:0 auto}
+
+/* ── the small letterspaced label. museum wall-label voice. ── */
+.label{
+  font-family:var(--sans); font-size:10.5px; font-weight:600;
+  letter-spacing:.19em; text-transform:uppercase; color:var(--faded);
+}
+
+/* ══ HEADER ══ */
+.masthead{
+  display:flex; justify-content:space-between; align-items:baseline;
+  gap:24px; flex-wrap:wrap;
+  padding:34px 0 0;
+}
+.masthead a{color:inherit}
+.sitename{
+  font-family:var(--sans); font-size:11px; font-weight:700;
+  letter-spacing:.24em; text-transform:uppercase; color:var(--ink);
+  text-decoration:none;
+}
+.masthead nav{display:flex;gap:20px}
+.masthead nav a{
+  font-family:var(--sans); font-size:10.5px; font-weight:500;
+  letter-spacing:.15em; text-transform:uppercase;
+  color:var(--faded); text-decoration:none;
+}
+.masthead nav a:hover{color:var(--rubric)}
+
+/* ══ THE CARD ══ the signature object. a placard on black cloth. ══ */
+.card{
+  background:var(--panel); color:var(--bone);
+  margin:56px 0 40px; padding:44px 40px 46px;
+  animation:rise .8s cubic-bezier(.2,.7,.3,1) both;
+}
+.card .label{color:#6d675a}
+.card-title{
+  font-size:27px; font-weight:500; line-height:1.22;
+  margin:14px 0 4px; letter-spacing:-.005em;
+}
+.card-attr{font-size:15px; color:#8b8577; font-style:italic; margin-bottom:30px}
+
+.face{font-size:21px; line-height:1.5; font-style:italic}
+.face--exit{color:#c9c4b4}
+
+/* ── THE OMISSION GLYPH ─────────────────────────────────
+   Dots missing their masts and flags, standing at
+   attention, waiting to waltz. The mark of what was cut.
+   ─────────────────────────────────────────────────────── */
+.glyph{display:flex; gap:5px; align-items:flex-end; margin:26px 0; height:15px}
+.glyph i{
+  display:block; width:1.5px; background:var(--rubric);
+  height:11px; opacity:.85;
+}
+.glyph i:nth-child(2){height:15px}
+.glyph i:nth-child(3){height:9px}
+.glyph i:nth-child(4){height:14px}
+.glyph i:nth-child(5){height:10px}
+.glyph--rule{margin:0; height:13px}
+.glyph--rule i{background:var(--rubric); opacity:.6}
+
+/* ══ THE STANCE ══ */
+.stance{
+  font-size:23px; line-height:1.45; max-width:30ch;
+  margin:0 0 8px;
+}
+.stance em{font-style:italic; color:var(--rubric)}
+.byline{font-size:15px; color:var(--faded); margin-bottom:64px}
+.byline a{color:var(--rubric); text-decoration:none; border-bottom:1px solid rgba(139,47,36,.3)}
+.byline a:hover{border-bottom-color:var(--rubric)}
+
+/* ══ SECTIONS ══ */
+.section{border-top:1px solid var(--rule); padding:26px 0 34px}
+.section-head{display:flex; align-items:baseline; gap:14px; margin-bottom:20px}
+.section-note{font-size:14.5px; color:var(--faded); font-style:italic}
+
+/* ── an entry ── */
+.entry{display:block; text-decoration:none; color:inherit; padding:11px 0; border-bottom:1px solid rgba(201,196,182,.5)}
+.entry:last-child{border-bottom:none}
+.entry:hover .entry-title{color:var(--rubric)}
+.entry-title{font-size:20px; line-height:1.3; transition:color .15s}
+.entry-meta{font-family:var(--sans); font-size:10.5px; letter-spacing:.13em; text-transform:uppercase; color:var(--faded); margin-top:4px}
+
+/* ── the honest empty state ── */
+.empty{font-size:16px; color:var(--faded); font-style:italic}
+
+/* ══ COLOPHON — the timestamp ══ */
+.colophon{border-top:1px solid var(--rule); padding:24px 0 60px; display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap}
+
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+@media(max-width:560px){
+  body{font-size:18px;padding:0 18px}
+  .card{padding:32px 26px 34px;margin:38px 0 32px}
+  .card-title{font-size:23px}
+  .face{font-size:19px}
+  .stance{font-size:21px}
+}
+a:focus-visible{outline:2px solid var(--rubric); outline-offset:3px}
+</style>
 </head>
 <body>
-  <div class="center">
-    <p>Jas Palmer</p>
-    <p>Elegist</p>
-  </div>
+<div class="wrap">
 
-  <div class="spacer"></div>
+  <header class="masthead">
+    <a class="sitename" href="/">Monk&rsquo;s Path</a>
+    <nav>
+      <a href="#essays">Essays</a>
+      <a href="#readings">Readings</a>
+      <a href="#pieces">Pieces</a>
+      <a href="#harvest">Harvest</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
 
-  <!-- your work goes here -->
+  <!-- ═══ THE CARD ═══════════════════════════════════════
+       The most characteristic object in the work: a title
+       and two faces lifted verbatim, a door and an exit.
+       Swap this card whenever a new one is harvested.
+       ════════════════════════════════════════════════════ -->
+  <article class="card">
+    <div class="label">Card 28 &middot; from the concordance</div>
+    <h1 class="card-title">Alban Berg: Master of the Smallest Link</h1>
+    <div class="card-attr">T. W. Adorno, 1968</div>
 
+    <p class="face">&ldquo;Tone&rdquo;</p>
+
+    <div class="glyph" aria-label="omitted"><i></i><i></i><i></i><i></i><i></i></div>
+
+    <p class="face face--exit">&ldquo;&hellip;an absolute balance of loyalty and the imagination that loyalty demands.&rdquo;</p>
+  </article>
+
+  <!-- ═══ THE STANCE ═══ edit this line when you rule on it ═══ -->
+  <p class="stance">Amidst derision, a vision. <em>Epiphany engines</em> — in film, in sound, in prose.</p>
+  <p class="byline">Jas Palmer, New York. &nbsp;<a href="mailto:hello@example.com">Write to me</a></p>
+
+
+  <!-- ═══ SERIALS ═══ add entries as they ship ═══ -->
+
+  <section class="section" id="essays">
+    <div class="section-head">
+      <span class="label">The Essays</span>
+      <span class="section-note">monthly &middot; one claim, one turn</span>
+    </div>
+    <!-- TEMPLATE — copy this block for each new essay:
+    <a class="entry" href="LINK">
+      <div class="entry-title">Title goes here</div>
+      <div class="entry-meta">1 August 2026</div>
+    </a>
+    -->
+    <p class="empty">Nothing here yet. The first is Noether.</p>
+  </section>
+
+  <section class="section" id="readings">
+    <div class="section-head">
+      <span class="label">The Readings</span>
+      <span class="section-note">public-domain text, read aloud</span>
+    </div>
+    <p class="empty">Nothing here yet.</p>
+  </section>
+
+  <section class="section" id="pieces">
+    <div class="section-head">
+      <span class="label">The Pieces</span>
+      <span class="section-note">found footage, score, voice &middot; 60&ndash;90 seconds</span>
+    </div>
+    <p class="empty">Nothing here yet.</p>
+  </section>
+
+  <section class="section" id="harvest">
+    <div class="section-head">
+      <span class="label">The Harvest</span>
+      <span class="section-note">one card a week, 28 of 159</span>
+    </div>
+    <p class="empty">Nothing here yet.</p>
+  </section>
+
+  <section class="section" id="about">
+    <div class="section-head"><span class="label">About</span></div>
+    <p>I make things out of what other people left behind — public-domain film, forgotten text, the archive&rsquo;s discard pile — and arrange them so something turns over in the person receiving them.</p>
+    <p style="margin-top:14px">A concordance of 159 cards is underway. Essays arrive monthly. Films when they&rsquo;re finished.</p>
+  </section>
+
+  <footer class="colophon">
+    <span class="label">Last updated 26 July 2026</span>
+    <span class="label">Set in EB Garamond</span>
+  </footer>
+
+</div>
 </body>
 </html>
