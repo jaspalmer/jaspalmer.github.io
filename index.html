@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Monk's Path — Jas Palmer</title>
+<title>Monk's Path — Jasper Palmer</title>
 <meta name="description" content="Epiphany engines. Film, sound, prose.">
 
 <!-- ══ FONTS ══ one request. EB Garamond: the commonplace-book face. -->
@@ -143,10 +143,13 @@ a:focus-visible{outline:2px solid var(--rubric); outline-offset:3px}
   <header class="masthead">
     <a class="sitename" href="/">Monk&rsquo;s Path</a>
     <nav>
+      <!-- Section links come back as each section gets its first entry:
       <a href="#essays">Essays</a>
       <a href="#readings">Readings</a>
       <a href="#pieces">Pieces</a>
       <a href="#harvest">Harvest</a>
+      -->
+      <a href="resume.pdf">R&eacute;sum&eacute;</a>
       <a href="#about">About</a>
     </nav>
   </header>
@@ -170,12 +173,15 @@ a:focus-visible{outline:2px solid var(--rubric); outline-offset:3px}
 
   <!-- ═══ THE STANCE ═══ edit this line when you rule on it ═══ -->
   <p class="stance">Amidst derision, a vision. <em>Epiphany engines</em> — in film, in sound, in prose.</p>
-  <p class="byline">Jas Palmer, New York. &nbsp;<a href="mailto:hello@example.com">Write to me</a></p>
+  <p class="byline">Jasper Palmer, Northern Virginia. &nbsp;<a href="mailto:jaspalmer@proton.me">Write to me</a> &middot; <a href="resume.pdf">R&eacute;sum&eacute;</a></p>
 
 
-  <!-- ═══ SERIALS ═══ add entries as they ship ═══ -->
+  <!-- ═══ SERIALS ═══ add entries as they ship ═══
+       Each section is hidden until it has its first entry.
+       To show one: delete the word "hidden" from its <section> tag,
+       and restore its link in the nav above. ═══ -->
 
-  <section class="section" id="essays">
+  <section class="section" id="essays" hidden>
     <div class="section-head">
       <span class="label">The Essays</span>
       <span class="section-note">monthly &middot; one claim, one turn</span>
@@ -189,7 +195,7 @@ a:focus-visible{outline:2px solid var(--rubric); outline-offset:3px}
     <p class="empty">Nothing here yet. The first is Noether.</p>
   </section>
 
-  <section class="section" id="readings">
+  <section class="section" id="readings" hidden>
     <div class="section-head">
       <span class="label">The Readings</span>
       <span class="section-note">public-domain text, read aloud</span>
@@ -197,7 +203,7 @@ a:focus-visible{outline:2px solid var(--rubric); outline-offset:3px}
     <p class="empty">Nothing here yet.</p>
   </section>
 
-  <section class="section" id="pieces">
+  <section class="section" id="pieces" hidden>
     <div class="section-head">
       <span class="label">The Pieces</span>
       <span class="section-note">found footage, score, voice &middot; 60&ndash;90 seconds</span>
@@ -205,7 +211,7 @@ a:focus-visible{outline:2px solid var(--rubric); outline-offset:3px}
     <p class="empty">Nothing here yet.</p>
   </section>
 
-  <section class="section" id="harvest">
+  <section class="section" id="harvest" hidden>
     <div class="section-head">
       <span class="label">The Harvest</span>
       <span class="section-note">one card a week, 28 of 159</span>
@@ -216,11 +222,11 @@ a:focus-visible{outline:2px solid var(--rubric); outline-offset:3px}
   <section class="section" id="about">
     <div class="section-head"><span class="label">About</span></div>
     <p>I make things out of what other people left behind — public-domain film, forgotten text, the archive&rsquo;s discard pile — and arrange them so something turns over in the person receiving them.</p>
-    <p style="margin-top:14px">A concordance of 159 cards is underway. Essays arrive monthly. Films when they&rsquo;re finished.</p>
+    <p style="margin-top:14px">A concordance of 159 cards is underway. Essays and films when they&rsquo;re finished.</p>
   </section>
 
   <footer class="colophon">
-    <span class="label">Last updated 26 July 2026</span>
+    <span class="label">Last updated 30 October 2026</span>
     <span class="label">Set in EB Garamond</span>
   </footer>
 
