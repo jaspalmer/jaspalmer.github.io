@@ -1,0 +1,155 @@
+[
+  {
+    "slug": "alban-berg",
+    "title": "Alban Berg: Master of the Smallest Link",
+    "maker": "T. W. Adorno",
+    "year": "1968",
+    "lang": "en",
+    "door": "Tone",
+    "exit": "…an absolute balance of loyalty and the imagination that loyalty demands.",
+    "added": "2026-07-11",
+    "featured": true
+  },
+  {
+    "slug": "heroides-x",
+    "title": "Heroides X, “Ariadne to Theseus”",
+    "maker": "Ovid",
+    "lang": "en",
+    "door": "upon a long tree-branch I fixed my shining veil — to put in mind of me those who had forgotten",
+    "exit": "turn about your ship, reverse your sail, glide swiftly back to me",
+    "added": "2026-11-01"
+  },
+  {
+    "slug": "red-love",
+    "title": "Red Love",
+    "maker": "Alexandra Kollontai",
+    "lang": "en",
+    "door": "Those eyes would never pass by another’s sorrow.",
+    "added": "2026-11-01"
+  },
+  {
+    "slug": "hello-girl",
+    "title": "The History of a Hello Girl",
+    "maker": "Michelle Christides",
+    "year": "1998–2000",
+    "note": "web feature, worldwar1.com",
+    "lang": "en",
+    "door": "… stringing the wire necessary for communication from the trenches …",
+    "exit": "They were back in an hour after the fire was put out.",
+    "added": "2026-11-01"
+  },
+  {
+    "slug": "abschied-von-gestern",
+    "title": "Abschied von gestern",
+    "maker": "Alexander Kluge",
+    "year": "1966",
+    "note": "released in English as Yesterday Girl",
+    "lang": "de",
+    "door": "Uns trennt von gestern kein Abgrund, sondern die veränderte Lage.",
+    "door_gloss": "We are separated from yesterday not by an abyss, but by the changed situation.",
+    "exit": "Jeder ist an allem schuld, aber wenn das jeder wüßte, hätten wir das Paradies auf Erden.",
+    "exit_gloss": "Everyone is guilty of everything, but if everyone knew that, we’d have paradise on Earth.",
+    "added": "2026-11-01"
+  },
+  {
+    "slug": "girls-imagination",
+    "title": "Girl’s Imagination",
+    "maker": "The Del-Byzanteens",
+    "year": "1981",
+    "lang": "en",
+    "door": "My Hands Are Yellow (From the Job That I Do)",
+    "exit": "My World Is Empty Without You",
+    "added": "2026-11-01"
+  },
+  {
+    "slug": "meet-the-supremes",
+    "title": "Meet the Supremes",
+    "maker": "The Supremes",
+    "year": "1962",
+    "lang": "en",
+    "door": "Buttered Popcorn",
+    "exit": "Time Changes Things",
+    "added": "2026-11-01"
+  },
+  {
+    "slug": "good-bread-alley",
+    "title": "Good Bread Alley",
+    "maker": "Carl Hancock Rux",
+    "year": "1999",
+    "lang": "en",
+    "door": "Thadius Star",
+    "exit": "I can’t write left-handed.",
+    "added": "2026-11-01"
+  },
+  {
+    "slug": "harvest",
+    "title": "Harvest",
+    "maker": "Neil Young",
+    "year": "1972",
+    "lang": "en",
+    "door": "Heart of Gold",
+    "exit": "Alabama",
+    "added": "2026-11-01"
+  },
+  {
+    "slug": "lamento-darianna",
+    "title": "Lamento d’Arianna",
+    "maker": "Claudio Monteverdi",
+    "year": "1608",
+    "note": "words by Ottavio Rinuccini",
+    "lang": "it",
+    "door": "…cibo di fere dispietate e crude…",
+    "door_gloss": "food for pitiless and cruel wild beasts",
+    "exit": "E non si spegne, / Fra tanto scherno ancor, d’amor",
+    "added": "2026-11-01"
+  },
+  {
+    "slug": "knots",
+    "title": "Knots",
+    "maker": "R. D. Laing",
+    "year": "1970",
+    "lang": "en",
+    "door": "I must play their game, of not seeing I see the game.",
+    "exit": "The finger is speechless.",
+    "added": "2026-11-01"
+  },
+  {
+    "slug": "where-the-wild-things-are",
+    "title": "Where the Wild Things Are",
+    "maker": "Maurice Sendak",
+    "year": "1963",
+    "lang": "en",
+    "door": "so he was sent to bed without eating anything",
+    "exit": "and it was still hot",
+    "added": "2026-11-01"
+  },
+  {
+    "slug": "juicy-and-delicious",
+    "title": "Juicy and Delicious",
+    "maker": "Lucy Alibar",
+    "note": "a one-act play",
+    "lang": "en",
+    "door": "Science: The End of Autonomy. Also Possibly the End of the World",
+    "added": "2026-11-01"
+  },
+  {
+    "slug": "beasts-of-the-southern-wild",
+    "title": "Beasts of the Southern Wild",
+    "maker": "Benh Zeitlin and Lucy Alibar",
+    "year": "2012",
+    "note": "lines from the screenplay",
+    "lang": "en",
+    "door": "An abandoned looking trailer sits on top of two 15-foot-tall oil drums.",
+    "exit": "They appear to be walking on water.",
+    "added": "2026-11-01"
+  },
+  {
+    "slug": "midnight-blue",
+    "title": "Midnight Blue",
+    "maker": "Kenny Burrell",
+    "year": "1963",
+    "lang": "en",
+    "door": "Soul Lament",
+    "added": "2026-11-01"
+  }
+]
