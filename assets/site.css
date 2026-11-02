@@ -1,0 +1,142 @@
+/* ═══════════════════════════════════════════════════════
+   EDIT EVERYTHING HERE. These are the only colors used.
+   ═══════════════════════════════════════════════════════ */
+:root{
+  --paper:  #eae7de;   /* library card stock — cool, grey-warm */
+  --ink:    #191713;   /* iron gall */
+  --rubric: #8b2f24;   /* manuscript red. the heading color. */
+  --panel:  #16150f;   /* Warburg's black cloth */
+  --bone:   #ddd8ca;   /* text on the panel */
+  --faded:  #7d7768;   /* captions, dates, absences */
+  --rule:   #c9c4b6;   /* hairlines */
+
+  --serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  --sans: ui-sans-serif, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper); color:var(--ink);
+  font-family:var(--serif); font-size:19px; line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  padding:0 24px;
+}
+.wrap{max-width:660px;margin:0 auto}
+a{color:var(--rubric); text-decoration:none; border-bottom:1px solid rgba(139,47,36,.3)}
+a:hover{border-bottom-color:var(--rubric)}
+a:focus-visible{outline:2px solid var(--rubric); outline-offset:3px}
+
+/* ── the small letterspaced label. museum wall-label voice. ── */
+.label{
+  font-family:var(--sans); font-size:10.5px; font-weight:600;
+  letter-spacing:.19em; text-transform:uppercase; color:var(--faded);
+}
+
+/* ══ HEADER ══ */
+.masthead{
+  display:flex; justify-content:space-between; align-items:baseline;
+  gap:12px 24px; flex-wrap:wrap;
+  padding:34px 0 0;
+}
+.masthead a{border:none}
+.sitename{
+  font-family:var(--sans); font-size:11px; font-weight:700;
+  letter-spacing:.24em; text-transform:uppercase; color:var(--ink);
+}
+.masthead nav{display:flex; gap:8px 20px; flex-wrap:wrap}
+.masthead nav a{
+  font-family:var(--sans); font-size:10.5px; font-weight:500;
+  letter-spacing:.15em; text-transform:uppercase; color:var(--faded);
+}
+.masthead nav a:hover,.masthead nav a[aria-current]{color:var(--rubric)}
+
+/* ══ THE CARD ══ the signature object. a placard on black cloth. ══ */
+.card{
+  background:var(--panel); color:var(--bone);
+  margin:56px 0 22px; padding:44px 40px 46px;
+  animation:rise .8s cubic-bezier(.2,.7,.3,1) both;
+}
+.card .label{color:#6d675a}
+.card-title{
+  font-size:27px; font-weight:500; line-height:1.22;
+  margin:14px 0 4px; letter-spacing:-.005em;
+}
+.card-title a{color:inherit; border:none}
+.card-title a:hover{color:#fff}
+.card-attr{font-size:15px; color:#8b8577; font-style:italic; margin-bottom:30px}
+
+.face{font-size:21px; line-height:1.5; font-style:italic}
+.face--exit{color:#c9c4b4}
+.gloss{font-size:15px; line-height:1.45; color:#8b8577; margin-top:8px}
+
+/* ── THE OMISSION GLYPH ─────────────────────────────────
+   Dots missing their masts and flags, standing at
+   attention, waiting to waltz. The mark of what was cut.
+   ─────────────────────────────────────────────────────── */
+.glyph{display:flex; gap:5px; align-items:flex-end; margin:26px 0; height:15px}
+.glyph i{display:block; width:1.5px; background:var(--rubric); height:11px; opacity:.85}
+.glyph i:nth-child(2){height:15px}
+.glyph i:nth-child(3){height:9px}
+.glyph i:nth-child(4){height:14px}
+.glyph i:nth-child(5){height:10px}
+
+/* ── under the card: where to go next ── */
+.after-card{display:flex; gap:10px 24px; flex-wrap:wrap; margin:0 0 52px}
+.draw, .after-card a{
+  font-family:var(--sans); font-size:10.5px; font-weight:600;
+  letter-spacing:.17em; text-transform:uppercase;
+}
+
+/* ══ THE STANCE ══ */
+.stance{font-size:23px; line-height:1.45; max-width:30ch; margin:0 0 8px}
+.stance em{font-style:italic; color:var(--rubric)}
+.byline{font-size:15px; color:var(--faded); margin-bottom:56px}
+
+/* ══ SECTIONS ══ */
+.section{border-top:1px solid var(--rule); padding:26px 0 34px}
+.section-head{display:flex; align-items:baseline; gap:14px; margin-bottom:14px}
+.section p + p{margin-top:14px}
+
+/* ── an entry ── */
+.entry{display:block; color:inherit; border:none; border-bottom:1px solid rgba(201,196,182,.5); padding:11px 0}
+.entry:last-child{border-bottom:none}
+.entry:hover .entry-title{color:var(--rubric)}
+.entry-title{font-size:20px; line-height:1.3; transition:color .15s}
+.entry-meta{font-family:var(--sans); font-size:10.5px; letter-spacing:.13em; text-transform:uppercase; color:var(--faded); margin-top:4px}
+
+/* ══ PAGES ══ */
+.page-title{font-size:36px; font-weight:500; line-height:1.15; letter-spacing:-.01em; margin:60px 0 16px}
+.lede{font-size:21px; line-height:1.5; margin-bottom:26px}
+.prose p{margin:0 0 16px}
+.prose h2{
+  font-family:var(--sans); font-size:10.5px; font-weight:600;
+  letter-spacing:.19em; text-transform:uppercase; color:var(--faded);
+  border-top:1px solid var(--rule); padding-top:26px; margin:38px 0 18px;
+}
+.lines{margin:0 0 18px}
+.lines dt{font-style:italic; color:var(--rubric); font-size:20px; line-height:1.3}
+.lines dd{margin:0 0 14px}
+.receipts{list-style:none; margin:0}
+.receipts li{border-bottom:1px solid rgba(201,196,182,.5); padding:14px 0}
+.receipts li:last-child{border-bottom:none}
+.receipts li p{margin:4px 0 0}
+.receipt-kind{font-family:var(--sans); font-size:10.5px; font-weight:600; letter-spacing:.17em; text-transform:uppercase; color:var(--rubric)}
+
+/* ══ COLOPHON — every page ends with one ══ */
+.colophon{border-top:1px solid var(--rule); margin-top:40px; padding:24px 0 60px}
+.colophon-text{font-size:15px; line-height:1.5; color:var(--faded); font-style:italic; margin-bottom:14px}
+.colophon-meta{display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap}
+
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+@media(max-width:560px){
+  body{font-size:18px; padding:0 16px}
+  .card{padding:32px 24px 34px; margin:38px 0 20px}
+  .card-title{font-size:23px}
+  .face{font-size:19px}
+  .stance{font-size:21px}
+  .page-title{font-size:30px; margin-top:44px}
+  .lede{font-size:19px}
+}
